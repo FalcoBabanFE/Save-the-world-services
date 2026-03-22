@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAWDAR — STW Services</title>
+<meta name="description" content="Nawdar STW Services — Premium Fortnite Save The World carries. Endurance builds, SSD carries. Fast, cheap, AFK friendly.">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--r:#e8003a;--g:#00f5a0;--gold:#ffc94a;--bg:#060810;--s:#111525;--s2:#181d30;--b:rgba(255,255,255,.07);--t:#c8d0e8}
+body{background:var(--bg);color:var(--t);font-family:'Barlow',sans-serif;min-height:100vh}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--r);border-radius:2px}
+
+/* PAGE SYSTEM */
+.page{display:none}
+.page.active{display:flex;flex-direction:column;min-height:100vh}
+
+/* LANDING */
+#pg-home{align-items:center;justify-content:center;padding:40px 16px;
+  background:radial-gradient(ellipse 70% 50% at 20% 50%,rgba(232,0,58,.1),transparent 60%),
+  radial-gradient(ellipse 60% 60% at 80% 30%,rgba(255,201,74,.05),transparent 55%),#060810}
+.wrap{max-width:860px;width:100%;text-align:center}
+.logo{display:inline-flex;align-items:center;gap:10px;margin-bottom:14px}
+.logo-hex{width:44px;height:44px;background:var(--r);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;animation:hexglow 3s ease-in-out infinite}
+@keyframes hexglow{0%,100%{filter:drop-shadow(0 0 8px rgba(232,0,58,.9))}50%{filter:drop-shadow(0 0 20px rgba(232,0,58,.3))}}
+.logo-txt{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;letter-spacing:.12em;color:#fff}
+.logo-txt span{color:var(--r)}
+.l-tag{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(200,208,232,.3);margin-bottom:8px}
+.l-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,9vw,5.2rem);line-height:.9;color:#fff;margin-bottom:10px}
+.l-h1 em{font-style:normal;color:var(--r)}
+.l-sub{font-size:.95rem;color:rgba(200,208,232,.38);margin-bottom:16px;font-weight:300;letter-spacing:.05em}
+.rating-bar{display:inline-flex;align-items:center;gap:10px;background:rgba(255,201,74,.08);border:1px solid rgba(255,201,74,.2);border-radius:30px;padding:8px 18px;margin-bottom:40px}
+.rating-stars{color:var(--gold);font-size:.9rem;letter-spacing:2px}
+.rating-num{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--gold)}
+.rating-count{font-size:.7rem;color:rgba(200,208,232,.4)}
+.choose{font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(200,208,232,.25);margin-bottom:18px;display:flex;align-items:center;justify-content:center;gap:12px}
+.choose::before,.choose::after{content:'';flex:1;max-width:70px;height:1px;background:rgba(255,255,255,.07)}
+.scards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:36px}
+@media(max-width:700px){.scards{grid-template-columns:1fr 1fr}}
+@media(max-width:440px){.scards{grid-template-columns:1fr}}
+.sc{position:relative;background:var(--s);border:1px solid var(--b);border-radius:18px;padding:30px 20px 26px;cursor:pointer;overflow:hidden;text-align:left;transition:transform .3s cubic-bezier(.34,1.56,.64,1),border-color .3s,box-shadow .3s}
+.sc::after{content:'';position:absolute;inset:0;opacity:0;transition:opacity .3s;border-radius:18px;pointer-events:none}
+.sc.end::after{background:radial-gradient(ellipse at 30% 0%,rgba(232,0,58,.22),transparent 65%)}
+.sc.ssd::after{background:radial-gradient(ellipse at 70% 0%,rgba(255,201,74,.16),transparent 65%)}
+.sc.vch::after{background:radial-gradient(ellipse at 50% 0%,rgba(0,245,160,.12),transparent 65%)}
+.sc:hover{transform:translateY(-5px) scale(1.01)}
+.sc:hover::after{opacity:1}
+.sc.end:hover{border-color:rgba(232,0,58,.55);box-shadow:0 18px 50px rgba(232,0,58,.15)}
+.sc.ssd:hover{border-color:rgba(255,201,74,.45);box-shadow:0 18px 50px rgba(255,201,74,.1)}
+.sc.vch:hover{border-color:rgba(0,245,160,.35);box-shadow:0 18px 50px rgba(0,245,160,.08)}
+.sc-tri{position:absolute;top:0;right:0;width:0;height:0}
+.sc.end .sc-tri{border-style:solid;border-width:0 48px 48px 0;border-color:transparent var(--r) transparent transparent}
+.sc.ssd .sc-tri{border-style:solid;border-width:0 48px 48px 0;border-color:transparent var(--gold) transparent transparent}
+.sc.vch .sc-tri{border-style:solid;border-width:0 48px 48px 0;border-color:transparent var(--g) transparent transparent}
+.sc-ico{font-size:2rem;margin-bottom:12px;display:block;position:relative;z-index:1}
+.sc.end .sc-ico{color:var(--r)}.sc.ssd .sc-ico{color:var(--gold)}.sc.vch .sc-ico{color:var(--g)}
+.sc-name{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.05em;color:#fff;line-height:1;margin-bottom:8px;position:relative;z-index:1}
+.sc-desc{font-size:
